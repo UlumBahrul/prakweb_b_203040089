@@ -21,7 +21,7 @@ $buku = query("SELECT * FROM buku")
 <nav class="navbar navbar-dark bg-primary p-1">
   <!-- Navbar content -->
   <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">Daftar Buku</span>
+    <span class="navbar-brand mb-0 h1">Daftar Buku Novel</span>
   </div>
 </nav>
  
