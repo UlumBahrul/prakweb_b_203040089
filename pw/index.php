@@ -19,12 +19,14 @@ $buku = query("SELECT * FROM buku")
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-primary p-1">
-    <!-- Navbar content -->
+  <!-- Navbar content -->
+  <nav class="navbar navbar-dark bg-primary p-2">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Daftar Buku Novel</span>
+      <span class="navbar-brand mb-0 h1">My Novel</span>
+      <a class="btn btn-sm btn-outline-secondary btn-light" href="php/tambah.php">Tambah</a>
     </div>
   </nav>
+  <!-- akhir navbar -->
 
   <!--Table content-->
   <section id="content" class="content p-4">
@@ -57,6 +59,7 @@ $buku = query("SELECT * FROM buku")
 
     </div>
   </section>
+  <!--akhir content-->
 
   <!-- footer -->
   <footer class="bg-dark fixed-bottom text-white">
