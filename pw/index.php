@@ -27,29 +27,36 @@ $buku = query("SELECT * FROM buku")
   </nav>
 
   <!--Table content-->
-  <table class="table table-bordered border-primary">
-    <tr class="table-dark">
-      <th>No.</th>
-      <th>Gambar</th>
-      <th>Judul Buku</th>
-      <th>Penulis</th>
-      <th>Tahun terbit</th>
-    </tr>
+  <section id="content" class="content p-4">
 
-    <?php $i = 1; ?>
-    <?php foreach ($buku as $bk) : ?>
-      <tr>
-        <td><?= $i; ?></td>
-        <td><img src="asset/<?= $bk["gambar"]; ?>" width="100px"></td>
-        <td><?= $bk["judul"]; ?></td>
-        <td><?= $bk["penulis"]; ?></td>
-        <td><?= $bk["tahun_terbit"]; ?></td>
-      </tr>
-      <?php $i++; ?>
-    <?php endforeach; ?>
+    <div class="container">
 
-  </table>
+      <div class="title text-center pt-2">
+        <h1>Daftar buku</h1>
+      </div>
 
+      <div class="row justify-content-center">
+        <?php
+        $nomer = 1;
+        foreach ($buku as $bk) :
+        ?>
+
+          <div class="card col-12 col-md-3 pt-3 " style="width: 18rem; padding:20px; margin:21px;">
+            <center><img src="asset/<?= $bk["gambar"]; ?>" alt="" width=250px; height=350px></center>
+            <div class="card-body">
+              <h5 class="card-title"><?= $bk["judul"] ?></h5>
+
+            </div>
+            <a href="php/detail.php?id=<?= $bk['id'] ?>" class="btn btn-primary card-text">Detail </a>
+
+          </div>
+
+        <?php endforeach; ?>
+
+      </div>
+
+    </div>
+  </section>
 
   <!-- footer -->
   <footer class="bg-dark fixed-bottom text-white">
