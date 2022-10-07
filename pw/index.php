@@ -19,38 +19,38 @@ $buku = query("SELECT * FROM buku")
 </head>
 
 <body>
-<nav class="navbar navbar-dark bg-primary p-1">
-  <!-- Navbar content -->
-  <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">Daftar Buku Novel</span>
-  </div>
-</nav>
- 
-<!--Table content-->
- <table class="table table-bordered border-primary">
-  <tr class="table-dark">
-    <th>No.</th>
-    <th>Gambar</th>
-    <th>Judul Buku</th>
-    <th>Penulis</th>
-    <th>Tahun terbit</th>
-  </tr>
+  <nav class="navbar navbar-dark bg-primary p-1">
+    <!-- Navbar content -->
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Daftar Buku Novel</span>
+    </div>
+  </nav>
 
-  <?php $i = 1;?>
-  <?php foreach ($buku as $bk) : ?>
-    <tr >
-      <td><?= $i ;?></td>
-      <td><img src="asset/<?= $bk["gambar"]; ?>" width = "100px"></td>
-      <td><?= $bk["judul"]; ?></td>
-      <td><?= $bk["penulis"]; ?></td>
-      <td><?= $bk["tahun_terbit"]; ?></td>
+  <!--Table content-->
+  <table class="table table-bordered border-primary">
+    <tr class="table-dark">
+      <th>No.</th>
+      <th>Gambar</th>
+      <th>Judul Buku</th>
+      <th>Penulis</th>
+      <th>Tahun terbit</th>
     </tr>
-    <?php $i++; ?>
-    <?php endforeach;?>
 
- </table>
+    <?php $i = 1; ?>
+    <?php foreach ($buku as $bk) : ?>
+      <tr>
+        <td><?= $i; ?></td>
+        <td><img src="asset/<?= $bk["gambar"]; ?>" width="100px"></td>
+        <td><?= $bk["judul"]; ?></td>
+        <td><?= $bk["penulis"]; ?></td>
+        <td><?= $bk["tahun_terbit"]; ?></td>
+      </tr>
+      <?php $i++; ?>
+    <?php endforeach; ?>
 
- 
+  </table>
+
+
   <!-- footer -->
   <footer class="bg-dark fixed-bottom text-white">
     <div class="container">
@@ -66,4 +66,5 @@ $buku = query("SELECT * FROM buku")
 
 
 </body>
+
 </html>
